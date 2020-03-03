@@ -8,7 +8,38 @@
   </head>
   <body>
     <div class="container">
-      <h1>Timestamp MicroService</h1>
+      <h1 class="text-center x-large">API Project: Timestamp MicroService</h1>
+
+      <!-- Info -->
+      <section class="info p-1">
+        <ol>
+          <li class="lead">
+            Endpoint de la API: GET [project_url]/api/timestamp/:date?
+          </li>
+          <li class="lead">
+            Si <var>date</var> esta vacia, esto es equivalente a new Date().
+          </li>
+          <li class="lead">
+            Si <var>date</var> es válido, la API retorna {"unix": <code>date.getTime()</date.getTime></code>, "utc" : <code>date.toUTCString()</code>}
+          </li>
+          <li class="lead">
+            Si <var>date</var> es invalido, la API retorna {"error" : "Invalid Date"}
+          </li>
+        </ol>
+      </section>
+
+      <!-- Example -->
+      <section class="example">
+        <h1 class="text-center large">Ejemplo de Uso</h1>
+        <ul class="my-1">
+          <li class="text-center"><a href="#">[project url]/api/timestamp/2019-02-14</a></li>
+          <li class="text-center"><a href="#">[project url]/api/timestamp/1550102400000</a></li>
+        </ul>
+        <h1 class="text-center large">Ejemplo de salida</h1>
+        <ul>
+          <li class="text-center lead">{ "unix": 1550102400000, "utc": "Thu, 14 Feb 2019 00:00:00 GMT" }</li>
+        </ul>
+      </section>
     </div>
   </body>
 </html>
